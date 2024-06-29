@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import RegexValidator
 
 import uuid
+from web3 import Web3
 
 #TODO add basescan validator
 
@@ -22,10 +23,10 @@ class Wallet(models.Model):
         }
     )
     address = models.CharField(
-        verbose_name="Base Wallet Address",
+        verbose_name="Wallet Address",
         max_length=42,
         unique=True,
-        validators=[RegexValidator(regex=r'^0x[a-fA-F0-9]{40}$')],
+        validators=[RegexValidator(regex=r'^0x[a-fA-F0-9]{40}$'), Web3.is_checksum_address],
     )
 
 class User(models.Model):
@@ -49,6 +50,9 @@ class Company(models.Model):
          editable = False) 
     name = models.CharField(max_length=200)
     wallet = models.ForeignKey(Wallet, on_delete=models.CASCADE)
+    api_key = models.UUIDField(
+         default = uuid.uuid4, 
+         editable = False) 
 
 class Oint(models.Model):
     '''
@@ -63,5 +67,8 @@ class Oint(models.Model):
         verbose_name="Oint Contract Address",
         max_length=42,
         unique=True,
-        validators=[RegexValidator(regex=r'^0x[a-fA-F0-9]{40}$')],
+        validators=[RegexValidator(regex=r'^0x[a-fA-F0-9]{40}$'), Web3.is_checksum_address],
+    )
+    abi_string = models.CharField(
+        verbose_name="Oint ABI string",
     )
