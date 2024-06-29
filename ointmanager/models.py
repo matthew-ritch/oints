@@ -71,4 +71,5 @@ class Oint(models.Model):
     )
     abi_string = models.CharField(
         verbose_name="Oint ABI string",
+        max_length=20000,
     )
