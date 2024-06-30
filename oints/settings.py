@@ -26,7 +26,8 @@ SECRET_KEY = dotenv_values('.env')['DJANGO_SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['oints.xyz']
+ALLOWED_HOSTS = ['*']
+CRSF_TRUSTED_ORIGINS = "https://oints.xyz"
 
 
 # Application definition
