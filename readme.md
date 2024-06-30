@@ -1,4 +1,4 @@
-### **Oints** is the home for tokenized marketing on [Base](https://www.base.org/).
+### [**Oints**](http://oints.xyz/) is the home for tokenized marketing on [Base](https://www.base.org/).
 
 #### Holders collect a company's points by
 - making purchases from the company,
