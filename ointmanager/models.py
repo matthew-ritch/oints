@@ -13,8 +13,7 @@ class Wallet(models.Model):
     '''
     id = models.UUIDField( 
          primary_key = True, 
-         default = uuid.uuid4, 
-         editable = False) 
+         default = uuid.uuid4) 
     type = models.CharField(
         max_length=40,
         choices = {
@@ -35,8 +34,7 @@ class User(models.Model):
     '''
     id = models.UUIDField( 
          primary_key = True, 
-         default = uuid.uuid4, 
-         editable = False)
+         default = uuid.uuid4)
     name = models.CharField(max_length=200)
     wallet = models.ForeignKey(Wallet, on_delete=models.CASCADE)
 
@@ -46,13 +44,11 @@ class Company(models.Model):
     '''
     id = models.UUIDField( 
          primary_key = True, 
-         default = uuid.uuid4, 
-         editable = False) 
+         default = uuid.uuid4) 
     name = models.CharField(max_length=200)
     wallet = models.ForeignKey(Wallet, on_delete=models.CASCADE)
     api_key = models.UUIDField(
-         default = uuid.uuid4, 
-         editable = False) 
+         default = uuid.uuid4) 
 
 class Oint(models.Model):
     '''
@@ -60,8 +56,7 @@ class Oint(models.Model):
     '''
     id = models.UUIDField( 
          primary_key = True, 
-         default = uuid.uuid4, 
-         editable = False) 
+         default = uuid.uuid4) 
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     contract_address = models.CharField(
         verbose_name="Oint Contract Address",
