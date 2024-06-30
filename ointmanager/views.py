@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 
 from ointmanager.models import Oint, User
 
@@ -15,7 +15,7 @@ w3 = Web3(Web3.HTTPProvider(f"https://base-sepolia.g.alchemy.com/v2/{dotenv_valu
 ###
 
 def index(request):
-    return HttpResponse("Welcome to Oints.")
+    return render(request, 'ointmanager/index.html' )
 
 ###apis
 
