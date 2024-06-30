@@ -19,3 +19,5 @@
 For instance, if Company A wants to advertise to Company B's existing customer base, they can
 - distribute CompanyAoints to CompanyBoint holders
 - or offer contracts to Company B's highest earning affiliate marketers 
+
+### To sign up your company, please send me a message at [matthew.drummond.ritch\@gmail.com](mailto:matthew.drummond.ritch@gmail.com?subject=Oints)
