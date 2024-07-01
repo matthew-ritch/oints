@@ -27,7 +27,7 @@ SECRET_KEY = dotenv_values('.env')['DJANGO_SECRET_KEY']
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CRSF_TRUSTED_ORIGINS = "https://oints.xyz"
+CRSF_TRUSTED_ORIGINS = ["https://oints.xyz"]
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_extensions"
 ]
 
 MIDDLEWARE = [
