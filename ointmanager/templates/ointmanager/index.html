@@ -11,7 +11,7 @@
         <p> 
             Oints are company loyalty ERC20 tokens that are earned through company purchases or affiliate referrals.
             <br>They can be redeemed for company purchases or traded (via Uniswap or other means) for Eth or tokens.
-            <br>users redeem company oints by burning them.
+            <br>Holders redeem company oints by burning them.
         </p>
         <p> 
             We are running as a demo on Base Sepolia. Our GitHub repo is <a href="https://github.com/matthew-ritch/oints">here</a>.
@@ -23,7 +23,7 @@
         <p> 
             The Oints API can be used to:
             <ol>
-                <li>Mint company oints to an oints user address</li>
+                <li>Mint company oints to a Base address</li>
                 <li>Check current oint balances</li>
             </ol>
         </p>
@@ -33,7 +33,7 @@
             <ul>
                 <li>Their contract address on Base Sepolia is <a href = "https://sepolia.basescan.org/token/0x22ae727e41207cfdbdd1c0260ecd379adc31480f">0x22ae727e41207cfdbdd1c0260ecd379adc31480f</a></li>
                 <li>Their oint_id is e38f03ba-fa00-4349-be96-200788c0aad6</li>
-                <li>Their private API code is 50cdb2a9-dd6e-4c0b-a35a-74d5f26c9891</li>
+                <li>Their private API key is 50cdb2a9-dd6e-4c0b-a35a-74d5f26c9891</li>
             </ul>
         </p>
 
@@ -53,7 +53,7 @@
             To mint your company's oint to some address, navigate to oints.xyz/api/mint_oints_to_address/{str:oint_id}/{str:address}/{int:amount}/{str:company_api_key},
             <br>&emsp;replacing {str:oint_id} with the oint_id string for that oint, 
             <br>&emsp;replacing {str:address} with the Base wallet address to which you want to mint,
-            <br>&emsp;replacing {int:amount} with the amount of oints to mint, and
+            <br>&emsp;replacing {int:amount} with the amount of oints you want to mint, and
             <br>&emsp;replacing {str:company_api_key} with your company's api key
         </p>
         <p>
